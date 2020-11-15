@@ -1,4 +1,5 @@
 import { Component} from '@angular/core';
+import { Estado } from '../entidades/estado';
 
 @Component({
   selector: 'app-vetores',
@@ -7,41 +8,23 @@ import { Component} from '@angular/core';
 })
 export class VetoresComponent {
 
-  nomes: string[] = ['Marcos', 'Maria', 'Joaquina'];
-  // nomes2: Array<string> = ['Paula', 'Pedro', 'Pietro'];
-  // nomes3 = new Array<string>('Marcos', 'Maria', 'Joaquina');
-  // nomes4 = new Array<string>(15);
+  listaEstados = new Array<Estado>();
 
-  nome: string = '';
+  estado: Estado = new Estado();
 
-  constructor(){
 
-    // this.nomes.push('Kaká');
-    // this.nomes.splice(0,1);
-
-    // for( let nome of this.nomes){
-    //   console.log(nome)
-    // }
-
-    // for (let i = 0; i < this.nomes2.length; i++) {
-    //  console.log(this.nomes2[i]);
-
-    // }
-  }
 
   adicionar(): void {
-    if (this.nome !== ''){
-      this.nomes.push(this.nome);
-      this.nome = '';
-    }
+    this.listaEstados.push(this.estado);
+    this.estado = new Estado();
   }
 
   excluir(i: number): void {
-    this.nomes.splice(i, 1)
+    this.listaEstados.splice(i, 1)
   }
 
   alterar(i: number): void {
-    this.nome = this.nomes[i];
-    this.nomes.splice(i,1)
+    this.estado = this.listaEstados[i];
+    this.listaEstados.splice(i,1)
   }
 }

@@ -2,10 +2,12 @@
 <div class="container-fluid text-center">
   <div class="row text-center mt-4 mb-4">
     <div class="col-4 m-4">
-      <h4 class="text-center">Adicionar nome</h4>
-      <form class="form-inline ">
-        <label class="sr-only" for="inlineFormInputName2" >Nome</label>
-        <input name="nome" [(ngModel)]="nome" type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Jane Doe">
+      <h4 class="text-center">Adicionar Estado</h4>
+      <form class="form ">
+        <label class="sr-only" for="inlineFormInputName2" >Nome Estado</label>
+        <input name="nome" [(ngModel)]="estado.nome" type="text" class="form-control mb-2 mr-sm-2" placeholder="Paraná">
+        <label class="sr-only" for="inlineFormInputName2" >Sigla</label>
+        <input name="sigla" [(ngModel)]="estado.sigla" type="text" class="form-control mb-2 mr-sm-2" placeholder="PR">
 
         <button class="btn btn-success btn-rounded  mb-2" (click)="adicionar()">Adicionar</button>
       </form>
@@ -15,13 +17,17 @@
       <table class="table table-striped">
         <thead>
           <tr>
-            <th scope="col">Nome</th>
+            <th scope="col">#</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Sigla</th>
             <th scope="col">Ação</th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let nome of nomes; let i = index" >
-            <td>{{nome}}</td>
+          <tr *ngFor="let estado of listaEstados; let i = index" >
+            <td>{{i}}</td>
+            <td>{{estado.nome}}</td>
+            <td>{{estado.sigla}}</td>
             <td>
               <button type="button" class="btn btn-md btn-info ml-2" (click)="alterar(i)">Alterar </button>
               <button type="button"  class="btn btn-md btn-danger ml-2"  (click)="excluir(i)">Excluir</button>
