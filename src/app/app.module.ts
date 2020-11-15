@@ -10,6 +10,7 @@ import { ErrorComponent } from './error404/error404.component';
 import { SomaComponent } from './soma/soma.component';
 import { FormsModule } from '@angular/forms';
 import { VetoresComponent } from './vetores/vetores.component';
+import { EstadoService } from './servicos/estado.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { VetoresComponent } from './vetores/vetores.component';
     AppRoutingModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [EstadoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

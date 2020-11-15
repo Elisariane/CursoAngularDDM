@@ -1,5 +1,4 @@
 import { Component} from '@angular/core';
-import { Estado } from '../entidades/estado';
 import { EstadoService } from '../servicos/estado.service';
 
 @Component({
@@ -9,8 +8,9 @@ import { EstadoService } from '../servicos/estado.service';
 })
 export class VetoresComponent {
 
-  service: EstadoService = new EstadoService()
+  constructor(private service: EstadoService){
 
+  }
   adicionar(): void {
     this.service.adicionar();
   }

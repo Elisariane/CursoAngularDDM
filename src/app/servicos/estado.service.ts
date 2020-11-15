@@ -1,5 +1,7 @@
+import { Injectable } from '@angular/core';
 import { Estado } from '../entidades/estado';
 
+@Injectable()
 export class EstadoService {
   listaEstados = new Array<Estado>();
 
