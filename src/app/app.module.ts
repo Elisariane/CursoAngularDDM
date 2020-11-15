@@ -24,7 +24,7 @@ import { VetoresComponent } from './vetores/vetores.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
