@@ -5,9 +5,9 @@
       <h4 class="text-center">Adicionar Estado</h4>
       <form class="form ">
         <label class="sr-only" for="inlineFormInputName2" >Nome Estado</label>
-        <input name="nome" [(ngModel)]="estado.nome" type="text" class="form-control mb-2 mr-sm-2" placeholder="Paraná">
+        <input name="nome" [(ngModel)]="service.estado.nome" type="text" class="form-control mb-2 mr-sm-2" placeholder="Paraná">
         <label class="sr-only" for="inlineFormInputName2" >Sigla</label>
-        <input name="sigla" [(ngModel)]="estado.sigla" type="text" class="form-control mb-2 mr-sm-2" placeholder="PR">
+        <input name="sigla" [(ngModel)]="service.estado.sigla" type="text" class="form-control mb-2 mr-sm-2" placeholder="PR">
 
         <button class="btn btn-success btn-rounded  mb-2" (click)="adicionar()">Adicionar</button>
       </form>
@@ -24,7 +24,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let estado of listaEstados; let i = index" >
+          <tr *ngFor="let estado of service.listaEstados; let i = index" >
             <td>{{i}}</td>
             <td>{{estado.nome}}</td>
             <td>{{estado.sigla}}</td>

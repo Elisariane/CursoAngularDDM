@@ -1,5 +1,6 @@
 import { Component} from '@angular/core';
 import { Estado } from '../entidades/estado';
+import { EstadoService } from '../servicos/estado.service';
 
 @Component({
   selector: 'app-vetores',
@@ -8,23 +9,17 @@ import { Estado } from '../entidades/estado';
 })
 export class VetoresComponent {
 
-  listaEstados = new Array<Estado>();
-
-  estado: Estado = new Estado();
-
-
+  service: EstadoService = new EstadoService()
 
   adicionar(): void {
-    this.listaEstados.push(this.estado);
-    this.estado = new Estado();
+    this.service.adicionar();
   }
 
   excluir(i: number): void {
-    this.listaEstados.splice(i, 1)
+    this.service.excluir(i);
   }
 
   alterar(i: number): void {
-    this.estado = this.listaEstados[i];
-    this.listaEstados.splice(i,1)
+    this.service.alterar(i);
   }
 }
