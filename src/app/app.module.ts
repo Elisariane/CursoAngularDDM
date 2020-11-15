@@ -9,6 +9,7 @@ import { SobreComponent } from './sobre/sobre.component';
 import { ErrorComponent } from './error404/error404.component';
 import { SomaComponent } from './soma/soma.component';
 import { FormsModule } from '@angular/forms';
+import { VetoresComponent } from './vetores/vetores.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     SobreComponent,
     ErrorComponent,
-    SomaComponent
+    SomaComponent,
+    VetoresComponent
   ],
   imports: [
     BrowserModule,

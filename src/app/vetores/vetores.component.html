@@ -1,0 +1,39 @@
+<home-component></home-component>
+<div class="container-fluid text-center">
+  <div class="row text-center mt-4 mb-4">
+    <div class="col-4 m-4">
+      <h4 class="text-center">Adicionar nome</h4>
+      <form class="form-inline ">
+        <label class="sr-only" for="inlineFormInputName2" name="nome" [(ngModel)]="nome">Name</label>
+        <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Jane Doe">
+
+        <button class="btn btn-success btn-rounded  mb-2" (click)="adicionar()">Adicionar</button>
+      </form>
+    </div>
+    <div class="col-4 m-4 ">
+      <h4 class="text-center">Ver nomes</h4>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let nome of nomes" >
+            <td>{{nome}}</td>
+            <td>
+              <button class="btn btn-md btn-info ml-2"><i class="far fa-edit"></i></button>
+              <button class="btn btn-md btn-danger ml-2"><i class="far fa-trash-alt"></i></button>
+            </td>
+
+          </tr>
+        </tbody>
+      </table>
+      <ul class="list-group">
+        <li  class="list-group-item"></li>
+      </ul>
+    </div>
+  </div>
+  </div>
+<footer-component></footer-component>
